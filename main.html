@@ -3,64 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inventory List</title>
 </head>
-<body>
-  
-</body>
-</html>
+
+<nav>
+  <a class ="href" href="./about.html">About</a>
+</nav>
 
 <link rel="stylesheet" href="style.css">
 
 <body>
 
-    <!-- A div with container id to hold the card -->
+  <h1 class = "Welcome">Welcome to your Own Inventory Manager!</h1>
+  <br>
+  <h2 class = "Second">Feel free to add any items to the inventory!</h2>
+    
     <div id="container">
         
   
-      <!-- A div with card class for the card  -->
-      <!-- <div class="card">
-        <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" alt="Lago di Braies"> -->
-  
-        <!-- A div with card__details class to hold the details in the card  -->
-        <!-- <div class="card__details"> -->
-  
-          <!-- Span with tag class for the tag -->
-          <!-- <span class="tag">Nature</span>
-  
-          <span class="tag">Lake</span>
-   -->
-          <!-- A div with name class for the name of the card -->
-          <!-- <div class="name">Lago di Braies</div>
-  
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam
-            pharetra
-            vitae ipsum odio.</p>
-  
-          <button>Read more</button>
-        </div>
-  
-  
-      </div> -->
+    
     </div>
   
   </body>
 
 
+  
 
 
-
-    <head>
-        <title>
-            Assignment 1
-        </title>
+  
         <link rel="stylesheet" href="style.css" type="text/css">
-    </head>
+   
 
     <body>
-        <nav>
-            <a href="./about.html">About</a>
-        </nav>
+       
 
         <div class = "container">
            
@@ -70,28 +45,47 @@
 
             <p id="dynamicContent"></p>
         </div>
-
+      <form class = "form">
+        <table>
+          <tr>
         <section class="name">
-            <label for="name">Item Name</label>
-            <input type="text" name="name" id="name" checked>
+            <td align = "right"><label for="name">Item Name:</label></td>
+            <td align="left"><input type="text" name="name" id="name" checked></td>
         </section>
+        </tr>
+          <tr>
         <section class="description">
-            <label for="description">Description of Item</label>
-            <input type="text" name="description" id="description" checked>
+            <td align = "right"><label for="description">Description of Item:</label></td>
+            <td align = "left"><input type="text" name="description" id="description" checked></td>
         </section>
-        <section class="price">
-            <label for="price">Price of Item</label>
-            <input type="number" name="price" id="price" checked>
+      </tr>
+      <tr>
+          <section class="price">
+            <td align = "right"><label for="price">Price of Item ($):</label></td>
+            <td align = "left"><input type="number" name="price" id="price" checked></td>
         </section>
+        </tr>
+        <tr>
         <section class="img">
-            <label for="img">Image of Item (can be URL)</label>
-            <input type="text" name="img" id="img" checked>
+            <td align = "right"><label for="img">Image of Item (can be URL):</label></td>
+            <td align = "left"><input type="text" name="img" id="img" checked></td>
         </section>
-
+        </tr>
+       
         <section class="submission">
-            <input type="button" value="Send" id="button">
+            <td align = "left"><input type="button" value="Add" id="button"></td>
         </section>
+        
+        
+        <td align = "left"><input type="reset" value="Reset" id ="reset"> </td>
+
+
+        <td align = "middle"><input type="button" value="Reset All" id="resetAll"></td>
+
+      </table>
+      </form>
         
         <script src="script.js"></script>
 
     </body>
+</html>

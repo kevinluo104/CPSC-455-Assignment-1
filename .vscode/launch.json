@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open main.html",
-            "file": "c:\\Users\\leiye\\Documents\\UBC\\2022-2023\\Summer\\CPSC 455\\CPSC-455-Assignment-1\\main.html"
+            "file": "c:\\Users\\kevin\\CPSC-455-Assignment-1\\main.html"
         }
     ]
 }

@@ -1,10 +1,58 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap"); */
-
 img {
     width: 100%;
     border-radius: 12px;
   height: 214px;
   object-fit: cover;
+  margin-top: 15px;
+  }
+  
+
+  .href {
+    font-size: 30px;
+  }
+
+  .Welcome {
+    text-align: center;
+    color: brown;
+  }
+
+  .Second {
+    text-align: center;
+    color: blue;
+  }
+
+  /* img.Hello { */
+    /* width:50%;
+    height: 1700px;
+    object-fit: cover; */
+  /* .Hello {
+    display: none;
+  }
+.Record:hover + .hide {
+  display: block;
+} */
+
+img.record {
+  display: none;
+}
+
+.record2:hover img.record {
+  display: block;
+  width:80%;
+    height: 1200px;
+    object-fit: cover;
+}
+
+.space {
+  margin-top: 50px;
+}
+  /* p.Record:hover img {
+    background-image: url('C:\Users\kevin\Downloads\Record.jpeg');
+display:block
+  } */
+
+  .reset {
+    display: inline-block;
   }
 
 
@@ -24,6 +72,14 @@ img {
     margin-top: 2vh;
   }
 
+  #reset {
+    display: inline-block;
+  }
+
+  .submission {
+    display: inline-block;
+  }
+
   .card {
     /* Change background color */
     background-color: white;
@@ -37,7 +93,13 @@ img {
   
     border-radius: 12px;
     display: inline-block;
+    /* opacity: 0;   */
+    /* transition: opacity 1s; */
   }
+
+  /* .fade-in {
+    opacity: 1;
+  } */
 
   /* Style div elements that have class equal to tag */
 .tag {
@@ -54,7 +116,7 @@ img {
   .name {
   
   
-    margin-top: 16px;
+    margin-top: 5px;
     /* object-fit: cover; */
     width: 100%
   }
@@ -78,7 +140,7 @@ img {
     border: none;
     padding: 12px 24px;
     border-radius: 50px;
-  
+    display: inline-block;
     font-weight: 600;
     color: #0077ff;
     background-color: #e0efff;
@@ -102,6 +164,34 @@ button:hover {
   background-color: #0077ff;
   color: #e0efff;
 }
+
+p.aboutMe {
+font-size: 20px;
+color: black;
+}
+
+.form {
+  background-color: white;
+  margin-top: 10px;
+}
+
+
+.name {
+  margin-top: 15px;
+}
+
+.description {
+  margin-top: 15px;
+}
+
+.price {
+  margin-top: 15px;
+}
+
+.img {
+  margin-top: 15px;
+}
+
 
 
 
