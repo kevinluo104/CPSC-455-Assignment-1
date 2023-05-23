@@ -7,6 +7,11 @@ let totalItems = 3;
 
 document.getElementById("randomNumber").innerHTML = totalItems;
 
+
+let itemName = [];
+let prices = [];
+
+
 let initialJSONString = `[
     
             {
@@ -33,13 +38,18 @@ let initialJSONString = `[
 let json1 = JSON.parse(initialJSONString);
 
 
-for (let item = 0; item < json1.length; item++) { 
+
+for (let item = 0; item < json1.length; item++) {
     let name1 = json1[item]["name"];
     let description1 = json1[item]["description"];
     let price1 = json1[item]["price"];
     let img1 = json1[item]["img"];
-    console.log(name1); // https://www.youtube.com/watch?v=R1liBYYF9k4&t=204s&ab_channel=procademy
-    let html1 = `<div class = "card"> 
+    itemName.push(name1);
+    console.log(price1);
+    prices.push(price1);
+    console.log(prices[2]);
+    console.log(name1);  // https://www.youtube.com/watch?v=R1liBYYF9k4&t=204s&ab_channel=procademy add elements dynamically
+    let html1 = `<div class = "card">   
     <img src= "${img1}" required>
     <div class="container">
         <div class="name" required>${name1}</div>
@@ -51,23 +61,54 @@ for (let item = 0; item < json1.length; item++) {
     </div>
 </div>`
 
-div.insertAdjacentHTML('beforeend', html1);
+    div.insertAdjacentHTML('beforeend', html1);
 
-document.querySelector('#remove-card-' + item).addEventListener( // https://www.youtube.com/watch?v=0aWGMxrdUZE&t=255s&ab_channel=procademy
-'click', function() {
-    let confirmation = confirm('Please confirm if you want to delete this item.');
-    if (confirmation) {
-    let elementToRemove = this.parentNode.parentNode;
-    elementToRemove.setAttribute("id", "hel");
-    console.log(elementToRemove);
-    div.removeChild(elementToRemove);
-    }
-});
+    document.querySelector('#remove-card-' + item).addEventListener( // https://www.youtube.com/watch?v=0aWGMxrdUZE&t=255s&ab_channel=procademy remove elements dynamically
+        'click', function () {
+            let confirmation = confirm('Please confirm if you want to delete this item.');
+            if (confirmation) {
+                let elementToRemove = this.parentNode.parentNode;
+                elementToRemove.setAttribute("id", "hel");
+                console.log(elementToRemove);
+                div.removeChild(elementToRemove);
+                itemName = itemName.filter(function (e) { return e !== name1 }) // https://stackoverflow.com/questions/3954438/how-to-remove-item-from-array-by-value
+                prices = prices.filter(function (e) { return e !== price1 })
+            }
+        });
 
 
 
 }
-//console.log(json1[0]["name"]);
+
+let itemButton = document.getElementById('itemButton');
+itemButton.addEventListener('click', numItems);
+
+function numItems() {
+    let item = document.getElementById('item').value;
+    let count = 0;
+    for (let i = 0; i < itemName.length; i++) {
+        if (itemName[i] == item) {
+            count++;
+        }
+    }
+    document.getElementById("match").innerHTML = count;
+}
+
+let priceButton = document.getElementById('priceButton');
+priceButton.addEventListener('click', priceItems);
+
+function priceItems() {
+    let price = document.getElementById('prices').value;
+    console.log(price);
+    console.log("HERE");
+    let count1 = 0;
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] > price) {
+            count1++;
+        }
+    }
+    document.getElementById("priceMatch").innerHTML = count1;
+}
 
 let submitButton = document.getElementById('button');
 
@@ -85,10 +126,12 @@ function addItem() {
     let price = document.getElementById('price').value;
     let image = document.getElementById('img').value;
     console.log("hello");
-    if (name == "" || description == ""  || price == "" || image == "") { // Check if all entries are filled out
+    if (name == "" || description == "" || price == "" || image == "") { // Check if all entries are filled out
         alert("All entries must be filled out");
         return;
     } // https://www.youtube.com/watch?v=R1liBYYF9k4&t=204s&ab_channel=procademy
+    itemName.push(name);
+    prices.push(price);
     let html = `<div class = "card"> 
                     <img src= "${image}" required>
                     <div class="container">
@@ -101,34 +144,28 @@ function addItem() {
                     </div>
                 </div>`;
 
-              
-                   
-       
-                    
 
-        div.insertAdjacentHTML('beforeend', html);
-        totalItems++;
-        document.getElementById("randomNumber").innerHTML = totalItems;
 
-         document.querySelector('#remove-card-' + i).addEventListener( // https://www.youtube.com/watch?v=0aWGMxrdUZE&t=255s&ab_channel=procademy
-            'click', function() {
-                let confirmation = confirm('Please confirm if you want to delete this item.');
-                if (confirmation) {
+
+    div.insertAdjacentHTML('beforeend', html);
+    totalItems++;
+    document.getElementById("randomNumber").innerHTML = totalItems;
+
+    document.querySelector('#remove-card-' + i).addEventListener( // https://www.youtube.com/watch?v=0aWGMxrdUZE&t=255s&ab_channel=procademy
+        'click', function () {
+            let confirmation = confirm('Please confirm if you want to delete this item.');
+            if (confirmation) {
                 let elementToRemove = this.parentNode.parentNode;
                 div.removeChild(elementToRemove);
                 totalItems--;
                 document.getElementById("randomNumber").innerHTML = totalItems;
-                }
-            });
-         
-           
-            i++;
+                itemName = itemName.filter(function (e) { return e !== name })
+                prices = prices.filter(function (e) { return e !== price })
+            }
+        });
+    i++;
 
 }
-
-
-
-
 
 
 
@@ -136,19 +173,12 @@ function addItem() {
 function deleteAll() { // https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom
     let paras = document.getElementsByClassName('card');
     console.log(paras);
-    while(paras[0]) {
+    while (paras[0]) {
         paras[0].parentNode.removeChild(paras[0]);
     }
     totalItems = 0;
     document.getElementById("randomNumber").innerHTML = totalItems;
-    
-
-    // for (let index = 0; index <= i; index++) {
-    //     document.querySelector('#remove-card-' + i).addEventListener(
-    //         'click', function() {
-    //             let elementToRemove = this.parentNode.parentNode;
-    //             div.removeChild(elementToRemove);
-    //         });
-    // }
+    itemName = [];
+    prices = [];
 }
 

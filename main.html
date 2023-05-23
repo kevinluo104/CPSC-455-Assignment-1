@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,91 +8,98 @@
 </head>
 
 <nav>
-  <a class ="href" href="./about.html">About</a>
+  <a class="href" href="./about.html">About</a>
 </nav>
 
 <link rel="stylesheet" href="style.css">
 
 <body>
 
-  <h1 class = "Welcome">Welcome to your Own Inventory Manager!</h1>
+  <h1 class="Welcome">Welcome to your Own Inventory Manager!</h1>
   <br>
-  <h2 class = "Second">Feel free to add any items to the inventory!</h2>
-    
-    <div id="container">
-        
-  
-    
-    </div>
-  
-  </body>
+  <h2 class="Second">Feel free to add any items to the inventory!</h2>
 
-
-  
-
-
-  
-        <link rel="stylesheet" href="style.css" type="text/css">
-   
-
-    <body>
-       
-
-        <div class = "container">
-           
-           
+  <div id="container">
 
 
 
-            <p id="dynamicContent"></p>
-        </div>
-      <form class = "form">
-        <table>
-          <tr>
+  </div>
+
+</body>
+
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<body>
+
+
+  <div class="container">
+
+  </div>
+  <form class="form">
+    <table>
+      <tr>
         <section class="name">
-            <td align = "right"><label for="name">Item Name:</label></td>
-            <td align="left"><input type="text" name="name" id="name" checked></td>
-        </section>
-        </tr>
-          <tr>
-        <section class="description">
-            <td align = "right"><label for="description">Description of Item:</label></td>
-            <td align = "left"><input type="text" name="description" id="description" checked></td>
+          <td align="right"><label for="name">Item Name:</label></td>
+          <td align="left"><input type="text" name="name" id="name" checked></td>
         </section>
       </tr>
       <tr>
-          <section class="price">
-            <td align = "right"><label for="price">Price of Item ($):</label></td>
-            <td align = "left"><input type="number" min = "0" name="price" id="price" checked></td>
+        <section class="description">
+          <td align="right"><label for="description">Description of Item:</label></td>
+          <td align="left"><input type="text" name="description" id="description" checked></td>
         </section>
-        </tr>
-        <tr>
+      </tr>
+      <tr>
+        <section class="price">
+          <td align="right"><label for="price">Price of Item ($):</label></td>
+          <td align="left"><input type="number" min="0" name="price" id="price" checked></td>
+        </section>
+      </tr>
+      <tr>
         <section class="img">
-            <td align = "right"><label for="img">Image of Item (URL only):</label></td>
-            <td align = "left"><input type="text" name="img" id="img" checked></td>
+          <td align="right"><label for="img">Image of Item (URL only):</label></td>
+          <td align="left"><input type="text" name="img" id="img" checked></td>
         </section>
-        </tr>
-       
-        <section class="submission">
-            <td align = "left"><input type="button" value="Add Item" id="button"></td>
-        </section>
-        
-        
-        <td align = "left"><input type="reset" value="Reset Form" id ="reset"> </td>
+      </tr>
+
+      <section class="submission">
+        <td align="left"><input type="button" value="Add Item" id="button"></td>
+      </section>
 
 
-        <td align = "middle"><input type="button" value="Delete All Items" id="resetAll"></td>
+      <td align="left"><input type="reset" value="Reset Form" id="reset"> </td>
 
-        <!-- <p class="number"></p> -->
 
-      </table>
-      </form>
+      <td align="middle"><input type="button" value="Delete All Items" id="resetAll"></td>
 
-      <h1 class = "inventory">Number of Items in Inventory:</h1>
-      <h1 id="randomNumber"></h1>
+    </table>
+  </form>
 
-        
-        <script src="script.js"></script>
+  <h1 class="inventory">Number of Items in Inventory:</h1>
+  <h1 id="randomNumber"></h1>
 
-    </body>
+  <h1 class="inventory"><abbr
+      title="This tool allows you to see how many of a certain item you have in your inventory.">How Many of a Certain
+      Item do We Have? (case-sensitive):</abbr></h1>
+  <h1 id="match"></h1>
+
+
+  <label for="item" class="record2">Item to Search: </label></td>
+  <td align="left"><input type="text" name="item" id="item" checked></td>
+  <td align="left"><input type="button" value="Search Item" id="itemButton"></td>
+
+  <!-- https://shihabiiuc.com/hover-html-text-title-attribute/ -->
+  <h1 class="inventory"><abbr
+      title="This tool allows you to see how many items are over a certain price in your inventory. A great tool to use to not overspend!">How
+      Many Items Are Over a Certain Price?:</abbr></h1>
+  <h1 id="priceMatch"></h1>
+  <label for="price" class="record2">Price: </label></td>
+  <td align="left"><input type="text" name="price" id="prices" checked></td>
+  <td align="left"><input type="button" value="Search" id="priceButton"></td>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

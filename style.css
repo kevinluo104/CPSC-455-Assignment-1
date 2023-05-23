@@ -1,127 +1,124 @@
 img {
-    width: 100%;
-    border-radius: 12px;
+  width: 100%;
+  border-radius: 12px;
   height: 214px;
   object-fit: cover;
   margin-top: 15px;
-  }
+}
 
-  .inventory {
-    color: blue;
-    font-size: 25px;
-  }
+.inventory {
+  color: blue;
+  font-size: 25px;
+}
 
-  #randomNumber {
-    font-size: 25px;
-  }
-  
+#randomNumber {
+  font-size: 25px;
+}
 
-  .href {
-    font-size: 30px;
-  }
 
-  .Welcome {
-    text-align: center;
-    color: brown;
-  }
+.href {
+  font-size: 20px;
+}
 
-  .Second {
-    text-align: center;
-    color: blue;
-  }
+.Welcome {
+  text-align: center;
+  color: brown;
+}
 
-  /* img.Hello { */
-    /* width:50%;
-    height: 1700px;
-    object-fit: cover; */
-  /* .Hello {
-    display: none;
-  }
-.Record:hover + .hide {
-  display: block;
-} */
+.Second {
+  text-align: center;
+  color: blue;
+}
+
 
 img.record {
   display: none;
 }
 
+
+
+.record2 {
+  font-size: 20px;
+}
+
 .record2:hover img.record {
   display: block;
-  width:80%;
-    height: 1200px;
-    object-fit: cover;
+  width: 80%;
+  height: 1200px;
+  object-fit: cover;
 }
 
 .space {
   margin-top: 50px;
 }
-  /* p.Record:hover img {
-    background-image: url('C:\Users\kevin\Downloads\Record.jpeg');
-display:block
-  } */
 
-  .reset {
-    display: inline-block;
+
+.reset {
+  display: inline-block;
+}
+
+
+
+body {
+  background-color: #eaeff1;
+  font-family: "Raleway", sans-serif;
+}
+
+/* https://www.w3schools.com/w3css/w3css_containers.asp */
+#container {
+  max-width: 300px;
+
+  /* Center the container in middle on horizontal axis */
+  margin: 0 auto;
+
+  /* Add empty space above the container (20% of the view height) */
+  margin-top: 2vh;
+}
+
+#reset {
+  display: inline-block;
+}
+
+.submission {
+  display: inline-block;
+}
+
+/* https://www.w3schools.com/howto/howto_css_cards.asp */
+.card {
+  background-color: white;
+  border: 1px solid #bacdd8;
+  padding: 8px;
+  width: 10%;
+  border-radius: 12px;
+  display: inline-block;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-
-
-  body {
-    background-color: #eaeff1;
-    font-family: "Raleway", sans-serif;
+  100% {
+    opacity: 1;
   }
+}
 
-  #container {
-    max-width: 300px;
-  
-    /* Center the container in middle on horizontal axis */
-    margin: 0 auto;
-  
-    /* Add empty space above the container (20% of the view height) */
-    margin-top: 2vh;
-  }
 
-  #reset {
-    display: inline-block;
-  }
-
-  .submission {
-    display: inline-block;
-  }
-
-  .card {
-    /* Change background color */
-    background-color: white;
-  
-    /* Add border */
-    border: 1px solid #bacdd8;
-  
-    /* Add space between the border and the content */
-    padding: 8px;
-    width: 10%;
-  
-    border-radius: 12px;
-    display: inline-block;
-    animation: fadeIn 5s;
-    /* opacity: 0;   */
-    /* transition: opacity 1s; */
-  }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
- 
 
 @keyframes fadeOut {
-  100% {opacity: 0;}
-  0% {opacity: 1;}
+  100% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 1;
+  }
 }
 
 #remove-card- {
   opacity: 1;
-  transition: opacity 1s; 
+  transition: opacity 1s;
 }
 
 #remove-card-.fade {
@@ -131,66 +128,54 @@ display:block
 .card.fade {
   opacity: 0;
 }
- 
 
-  /* Style div elements that have class equal to tag */
 .tag {
-    padding: 4px 8px;
-    border: 1px solid #e5eaed;
-  
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #788697;
-  }
-  
-  /* Style div elements that have class equal to name */
-  .name {
-  
-  
-    margin-top: 5px;
-    /* object-fit: cover; */
-    width: 100%
-  }
-  
-  /* Style p element */
-  p {
-    font-size: 14px;
-    color: #7f8c9b;
-    line-height: 150%;
-  }
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
 
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
 
 
-  /* Style button element */
-  button {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 50px;
-    display: inline-block;
-    font-weight: 600;
-    color: #0077ff;
-    background-color: #e0efff;
-  
-    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
-    margin: 0 auto;
-    display: block;
-  
-    /* Button is a clickable element, therefore it should have a pointer cursor */
-    cursor: pointer;
-  }
-  
-  .card__details {
-    /* Add space around the details */
-    padding: 16px 8px 8px 8px;
-  }
+.name {
+  margin-top: 5px;
+  width: 100%
+}
 
-  /* Add style when button is focused or hovered */
+p {
+  font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.card__details {
+  padding: 16px 8px 8px 8px;
+}
+
 button:focus,
 button:hover {
   background-color: #0077ff;
@@ -198,8 +183,8 @@ button:hover {
 }
 
 p.aboutMe {
-font-size: 20px;
-color: black;
+  font-size: 20px;
+  color: black;
 }
 
 .form {
@@ -224,31 +209,3 @@ color: black;
 .img {
   margin-top: 15px;
 }
-
-
-
-
-/* body{
-    background-color: blueviolet;
-}
-
-.card{
-    display:flex;
-    background-color: #f2f2f2;
-    padding: 10px 10px;
-    margin: 10px 0px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-.container {
-    padding: 2px 16px;
-}
-
-.item {
-    margin-top: 30px;
-} */
