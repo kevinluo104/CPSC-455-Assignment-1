@@ -62,28 +62,34 @@
       <tr>
           <section class="price">
             <td align = "right"><label for="price">Price of Item ($):</label></td>
-            <td align = "left"><input type="number" name="price" id="price" checked></td>
+            <td align = "left"><input type="number" min = "0" name="price" id="price" checked></td>
         </section>
         </tr>
         <tr>
         <section class="img">
-            <td align = "right"><label for="img">Image of Item (can be URL):</label></td>
+            <td align = "right"><label for="img">Image of Item (URL only):</label></td>
             <td align = "left"><input type="text" name="img" id="img" checked></td>
         </section>
         </tr>
        
         <section class="submission">
-            <td align = "left"><input type="button" value="Add" id="button"></td>
+            <td align = "left"><input type="button" value="Add Item" id="button"></td>
         </section>
         
         
-        <td align = "left"><input type="reset" value="Reset" id ="reset"> </td>
+        <td align = "left"><input type="reset" value="Reset Form" id ="reset"> </td>
 
 
-        <td align = "middle"><input type="button" value="Reset All" id="resetAll"></td>
+        <td align = "middle"><input type="button" value="Delete All Items" id="resetAll"></td>
+
+        <!-- <p class="number"></p> -->
 
       </table>
       </form>
+
+      <h1 class = "inventory">Number of Items in Inventory:</h1>
+      <h1 id="randomNumber"></h1>
+
         
         <script src="script.js"></script>
 

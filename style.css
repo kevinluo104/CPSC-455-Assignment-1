@@ -5,6 +5,15 @@ img {
   object-fit: cover;
   margin-top: 15px;
   }
+
+  .inventory {
+    color: blue;
+    font-size: 25px;
+  }
+
+  #randomNumber {
+    font-size: 25px;
+  }
   
 
   .href {
@@ -93,13 +102,36 @@ display:block
   
     border-radius: 12px;
     display: inline-block;
+    animation: fadeIn 5s;
     /* opacity: 0;   */
     /* transition: opacity 1s; */
   }
 
-  /* .fade-in {
-    opacity: 1;
-  } */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+ 
+
+@keyframes fadeOut {
+  100% {opacity: 0;}
+  0% {opacity: 1;}
+}
+
+#remove-card- {
+  opacity: 1;
+  transition: opacity 1s; 
+}
+
+#remove-card-.fade {
+  opacity: 0;
+}
+
+.card.fade {
+  opacity: 0;
+}
+ 
 
   /* Style div elements that have class equal to tag */
 .tag {
@@ -173,6 +205,7 @@ color: black;
 .form {
   background-color: white;
   margin-top: 10px;
+  max-width: 700px;
 }
 
 

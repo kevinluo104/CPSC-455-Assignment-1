@@ -3,6 +3,9 @@ div.classList.add('item');
 let containderDiv = document.querySelector('.container');
 containderDiv.appendChild(div);
 
+let totalItems = 3;
+
+document.getElementById("randomNumber").innerHTML = totalItems;
 
 let initialJSONString = `[
     
@@ -55,6 +58,8 @@ document.querySelector('#remove-card-' + item).addEventListener( // https://www.
     let confirmation = confirm('Please confirm if you want to delete this item.');
     if (confirmation) {
     let elementToRemove = this.parentNode.parentNode;
+    elementToRemove.setAttribute("id", "hel");
+    console.log(elementToRemove);
     div.removeChild(elementToRemove);
     }
 });
@@ -96,7 +101,14 @@ function addItem() {
                     </div>
                 </div>`;
 
+              
+                   
+       
+                    
+
         div.insertAdjacentHTML('beforeend', html);
+        totalItems++;
+        document.getElementById("randomNumber").innerHTML = totalItems;
 
          document.querySelector('#remove-card-' + i).addEventListener( // https://www.youtube.com/watch?v=0aWGMxrdUZE&t=255s&ab_channel=procademy
             'click', function() {
@@ -104,12 +116,22 @@ function addItem() {
                 if (confirmation) {
                 let elementToRemove = this.parentNode.parentNode;
                 div.removeChild(elementToRemove);
+                totalItems--;
+                document.getElementById("randomNumber").innerHTML = totalItems;
                 }
             });
-
+         
+           
             i++;
 
 }
+
+
+
+
+
+
+
 
 function deleteAll() { // https://stackoverflow.com/questions/10842471/how-to-remove-all-elements-of-a-certain-class-from-the-dom
     let paras = document.getElementsByClassName('card');
@@ -117,6 +139,9 @@ function deleteAll() { // https://stackoverflow.com/questions/10842471/how-to-re
     while(paras[0]) {
         paras[0].parentNode.removeChild(paras[0]);
     }
+    totalItems = 0;
+    document.getElementById("randomNumber").innerHTML = totalItems;
+    
 
     // for (let index = 0; index <= i; index++) {
     //     document.querySelector('#remove-card-' + i).addEventListener(
